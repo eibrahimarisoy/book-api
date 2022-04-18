@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env(
     # set casting, default value
-    SECRET_KEY=(str, "local"),
+    SECRET_KEY=(str, "SECRET_KEY"),
 )
 
 # Quick-start development settings - unsuitable for production
