@@ -39,22 +39,22 @@ class Author(BaseModel):
         verbose_name_plural = "Authors"
 
     def __str__(self):
-        return f"{self.firstname} {self.lastname}"
+        return f"{self.first_name} {self.last_name}"
 
 
-# Create your models here.
 class Book(BaseModel):
     name = models.CharField(max_length=100, verbose_name='Bookname')
     description = models.TextField(verbose_name='Description')
     page = models.PositiveIntegerField(verbose_name='Page')
     author = models.ForeignKey(
-        Author,
+        "books.Author",
         verbose_name="Author",
         related_name='books',
         on_delete=models.CASCADE
     )
     category = models.ManyToManyField(
-        Category,verbose_name='Category',
+        "books.Category",
+        verbose_name='Category',
         related_name='books',
     )
 
