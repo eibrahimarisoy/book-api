@@ -1,8 +1,9 @@
-from books.filters import BookFilter
 from rest_framework import viewsets
 
+from books.filters import BookFilter
 from books.models import Author, Book, Category
-from books.serializers import AuthorSerializer, BookSerializer, CategorySerializer
+from books.serializers import (AuthorSerializer, BookSerializer,
+                               CategorySerializer)
 
 
 class AuthorViewSet(viewsets.ModelViewSet):
