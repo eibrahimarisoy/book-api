@@ -7,7 +7,12 @@ It is a RESTful API that provides CRUD operations for books, authors and categor
  - Django Rest Framework
  - django-filters
 
-# Database
+# Configuration
+App uses .env file for configuration.
+You must use .env file.
+Please check .env.example file for configuration.
+
+# Database 
 App uses file based Sqlite database. You can find database file in the project root.
 
 ## Clone the project and Install the dependencies
